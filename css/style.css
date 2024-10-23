@@ -31,24 +31,25 @@ img {
 }
 
 .container {
-    max-width: 320px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin: 0;
+    max-width: none; /* Убираем максимальную ширину */
+    width: 100%; /* Устанавливаем ширину 100% */
+    padding-left: 16px; /* Убедитесь, что вы оставили паддинг */
+    padding-right: 16px; /* Убедитесь, что вы оставили паддинг */
+    margin: 0; /* Убираем отступы */
 }
 
 /* Задайте отступы для всей шапки */
 .header {
     position: relative;
-    width: 100%;
-    min-width: 365px;
+    width: 100%; /* Занимает всю ширину */
+    min-width: 365px; /* Минимальная ширина */
     min-height: 648px;
     background-image: url(../images/Photo-Natali.jpg);
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: flex-start; /* Выравнивание по левому краю */
     transition: all 0.3s ease;
 }
 
@@ -157,6 +158,155 @@ margin: 0;
     text-decoration: none; 
     color: #333; 
 }
+
+
+.basis{
+    display: flex;
+    width: 100%; /* Занимает всю ширину */
+    min-width: 365px; /* Минимальная ширина */
+    padding: 44px 0; /* Убедитесь, что только сверху и снизу */
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Выравнивание по левому краю */
+    gap: 10px;
+    background: #4C4645;
+    backdrop-filter: blur(25px);
+    position: relative;
+    overflow: hidden; 
+}
+.start-your-way-text{
+    align-self: stretch;
+color: #FFFAF5;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+font-variant: small-caps;
+
+}
+.image-container {
+    position: relative;
+    height: 350px; /* Убедитесь, что эта высота соответствует видимой половине изображения */
+    overflow: hidden; /* Скрывает содержимое, выходящее за пределы контейнера */
+}
+
+.basis-head {
+ position: absolute; 
+    top: -10%; /* Центрируем по вертикали */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translate(-50%, -100%) rotate(0deg); /* Убедитесь, что верхняя часть видна */
+    transition: transform 0.2s; 
+    width: 699px;
+    height: 699px;
+}
+
+  body.scroll .basis-head {
+    transform: translateX(-50%) rotate(10deg); /* Поворот на 10 градусов */
+  }
+
+  .Help-you {
+    padding: 0 16px; /* Убедитесь, что добавили паддинги для контейнера */
+}
+
+.black-line {
+    height: 2px; /* Высота полосы */
+    background-color: black; /* Цвет полосы */
+    margin: 54px 0; /* Отступ сверху и снизу от полосы */
+    width: 100%; /* Ширина полосы на всю ширину контейнера */
+}
+
+.Help-you-text{
+flex-shrink: 0;
+ color: #4C4645;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+font-variant: small-caps;
+flex-shrink: 0;
+}
+
+.Help-you-history-text{
+    flex-shrink: 0;
+    color: #4C4645;
+   font-family: Montserrat;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   font-variant: small-caps;
+   }
+   .Certificate {
+    background-color: rgba(255, 216, 195, 0.8); /* Полупрозрачный фон */
+    padding: 40px 16px; /* Отступы секции */
+    text-align: center; /* Центрирование текста */
+    backdrop-filter: blur(10px); /* Эффект размытия фона */
+    border-radius: 20px; /* Закругленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень */
+    overflow: hidden; /* Скрываем переполнение */
+}
+
+.black-line {
+    height: 2px; /* Высота линии */
+    background-color: black; /* Цвет линии */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+.Certificate {
+    background-color: rgba(255, 216, 195, 0.8); /* Полупрозрачный фон */
+    padding: 40px 16px; /* Отступы секции */
+    text-align: center; /* Центрирование текста */
+    backdrop-filter: blur(10px); /* Эффект размытия фона */
+    border-radius: 20px; /* Закругленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень */
+    overflow: hidden; /* Скрываем переполнение */
+}
+
+.black-line {
+    height: 2px; /* Высота линии */
+    background-color: black; /* Цвет линии */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+.Certificate-text {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.certificates-slider {
+    position: relative;
+    overflow: hidden; /* Скрываем переполнение */
+}
+
+.certificates-wrapper {
+    display: flex;
+    animation: scroll 15s linear infinite; /* Анимация прокрутки */
+}
+
+.certificate {
+    flex: 0 0 200px; /* Ширина сертификата */
+    margin: 0 10px; /* Отступ между сертификатами */
+}
+
+.certificate-image {
+    width: 100%; /* Полная ширина изображения */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+/* Анимация прокрутки */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); } /* Прокручиваем на 100% */
+}
+
+
+
+
 
 /* Мобильные стили */
 @media (max-width: 768px) {
