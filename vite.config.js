@@ -10,7 +10,6 @@ export default defineConfig(({ command }) => {
       [command === 'serve' ? 'global' : '_global']: {},
     },
     root: 'src',
-    base:'/Natli-mind/',
     build: {
       sourcemap: true,
       rollupOptions: {
