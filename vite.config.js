@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import {glob} from 'glob';
+import { glob } from 'glob';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 
@@ -10,9 +10,11 @@ export default defineConfig(({ command }) => {
     },
     root: 'src',
     base: '/Natli-mind/',
+    publicDir: 'src/images',
     build: {
       sourcemap: true,
-
+      outDir: '../dist', 
+      assetsDir: 'assets', 
       rollupOptions: {
         input: glob.sync('./src/*.html'),
         output: {
@@ -24,8 +26,10 @@ export default defineConfig(({ command }) => {
           entryFileNames: 'commonHelpers.js',
         },
       },
-      outDir: '../dist',
     },
-    plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
+    plugins: [
+      injectHTML(),
+      FullReload(['./src/**/**.html']),
+    ],
   };
 });
